@@ -9,6 +9,8 @@ This map states what each executable check supports and what remains a manuscrip
 | Non-injectivity of finite-sum composition | `noninjective_composition_witness()` | Constructs two distinct finite channel families with equal composite `0` |
 | D2 early boundary obstruction | `construct_d2_witness()` | Reproduces Stage-3 first branching for the displayed pair |
 | Synthetic `3 x 3` indexed witness | `enumerate_indexed_witness()` | Exhaustively checks all `512` index-aligned pairs |
+| Indexed assignment domains | `assignment_domain_lh()` and `assignment_domain_lg()` | Constructs the displayed finite domains with cardinalities `768` and `1536` |
+| Indexed Stage-5 obstruction and first branch | `derive_indexed_first_branch()` | Uses the supplied Stage-4 identity comparison plus unequal finite assignment-domain cardinalities to rule out Stage-5 comparison and derive first branch `5` |
 | Channel counts | deterministic enumeration | Reproduces `768` and `1536` |
 | Channel-structure mismatches | deterministic enumeration | Reproduces `387` |
 | Vertical without horizontal | deterministic enumeration | Reproduces `62` |

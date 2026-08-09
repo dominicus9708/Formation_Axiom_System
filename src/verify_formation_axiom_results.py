@@ -34,7 +34,17 @@ def main() -> None:
     for key, expected in EXPECTED.items():
         if key in indexed:
             assert indexed[key] == expected, (key, indexed[key], expected)
+
+    assert indexed["stage4_identity_comparison_supplied"] is True
+    assert indexed["stage5_assignment_domain_bijection_impossible"] is True
+    assert indexed["LH_assignment_domain_cardinality"] != indexed["LG_assignment_domain_cardinality"]
+    assert indexed["stage_comparison_nonempty"][:5] == [True, True, True, True, True]
+    assert indexed["stage_comparison_nonempty"][5:] == [False, False, False]
+    assert indexed["indexed_first_branch"] == 5
+
     assert audit == proof_obligation_audit()
+    assert audit["indexed_first_branch_derived_from_stage5_cardinality_obstruction"] is True
+    assert audit["indexed_assignment_domain_cardinalities_verified"] is True
     assert all(
         value is True
         for key, value in audit.items()
@@ -54,8 +64,9 @@ def main() -> None:
     assert len(vertical_only_rows) == EXPECTED["vertical_without_horizontal"]
 
     print(
-        "Verification passed: D2 first branch 3; indexed first branch 5; "
-        "channel counts 768/1536; mismatches 387; vertical-only 62; coincidences 127."
+        "Verification passed: D2 first branch 3; indexed first branch 5 derived from "
+        "Stage-4 identity comparison plus the 768/1536 Stage-5 assignment-domain "
+        "cardinality obstruction; mismatches 387; vertical-only 62; coincidences 127."
     )
 
 

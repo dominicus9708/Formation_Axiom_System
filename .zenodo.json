@@ -1,7 +1,7 @@
 {
   "title": "Formation Axiom System: Dimensional-Structural Describability — Reproducibility Package",
   "upload_type": "software",
-  "description": "Standard-library Python reproduction and proof-audit companion for the finite constructions in Formation Axiom System: Dimensional-Structural Describability. The package reconstructs the one-point and D2 witnesses, the synthetic indexed 3 x 3 witness, a non-injective finite-sum composition witness, and the reported counts 768, 1536, 387, 62, and 127. General set-theoretic proofs remain in the manuscript.",
+  "description": "Standard-library Python reproduction and proof-audit companion for the finite constructions in Formation Axiom System: Dimensional-Structural Describability. The package reconstructs the one-point and D2 witnesses, the synthetic indexed 3 x 3 witness, a non-injective finite-sum composition witness, and the reported counts 768, 1536, 387, 62, and 127. For the indexed witness it also constructs the two Stage-5 assignment domains, verifies their cardinalities 768 and 1536, and derives the Stage-5 bijection obstruction and first branching index 5 from the supplied Stage-4 identity comparison. General set-theoretic proofs remain in the manuscript.",
   "creators": [
     {
       "name": "Kwon, Dominicus"

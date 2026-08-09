@@ -10,8 +10,11 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from formation_axiom_reproduction import (  # noqa: E402
     EXPECTED,
+    assignment_domain_lg,
+    assignment_domain_lh,
     construct_d2_witness,
     construct_one_point_model,
+    derive_indexed_first_branch,
     enumerate_indexed_witness,
     noninjective_composition_witness,
     role_set_lh,
@@ -31,12 +34,25 @@ class FormationAxiomReproductionTests(unittest.TestCase):
         self.assertEqual(witness.stage_comparison_nonempty[:3], (True, True, True))
         self.assertFalse(witness.stage_comparison_nonempty[3])
 
+    def test_indexed_assignment_domain_cardinalities(self) -> None:
+        self.assertEqual(len(assignment_domain_lh()), 768)
+        self.assertEqual(len(assignment_domain_lg()), 1536)
+
+    def test_indexed_first_branch_is_derived(self) -> None:
+        branching = derive_indexed_first_branch()
+        self.assertTrue(branching["stage4_identity_comparison_supplied"])
+        self.assertTrue(branching["stage5_assignment_domain_bijection_impossible"])
+        self.assertEqual(branching["stage_comparison_nonempty"][:5], [True, True, True, True, True])
+        self.assertEqual(branching["stage_comparison_nonempty"][5:], [False, False, False])
+        self.assertEqual(branching["indexed_first_branch"], 5)
+
     def test_indexed_counts(self) -> None:
         summary, rows = enumerate_indexed_witness()
         self.assertEqual(len(rows), 512)
         for key, expected in EXPECTED.items():
             if key in summary:
                 self.assertEqual(summary[key], expected)
+        self.assertTrue(summary["stage5_assignment_domain_bijection_impossible"])
 
     def test_partition_boundaries(self) -> None:
         self.assertEqual(role_set_lh(124), ("H", "V", "D"))

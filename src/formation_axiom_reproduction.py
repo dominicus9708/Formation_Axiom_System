@@ -20,6 +20,8 @@ EXPECTED = {
     "indexed_configurations": 512,
     "LH_channels": 768,
     "LG_channels": 1536,
+    "LH_assignment_domain_cardinality": 768,
+    "LG_assignment_domain_cardinality": 1536,
     "mismatched_configurations": 387,
     "vertical_without_horizontal": 62,
     "composite_coincidences_among_mismatches": 127,
@@ -76,6 +78,49 @@ def role_set_lh(index: int) -> tuple[Role, ...]:
     if index < 506:
         return ("H",)
     return ("H", "V")
+
+
+def assignment_domain_lh() -> frozenset[tuple[int, Role]]:
+    """Construct the displayed L_H assignment domain Q_{L_H,lambda_E}."""
+    return frozenset((index, role) for index in range(512) for role in role_set_lh(index))
+
+
+def assignment_domain_lg() -> frozenset[tuple[int, Role]]:
+    """Construct the displayed L_G assignment domain Q_{L_G,lambda_E}."""
+    return frozenset((index, role) for index in range(512) for role in ("H", "V", "D"))
+
+
+def derive_indexed_first_branch() -> dict[str, object]:
+    """Derive the indexed witness's Stage-5 obstruction and first branch.
+
+    The manuscript supplies an identity comparison through Stage 4 for the two
+    indexed regimes. Stage 5 requires preservation of the assignment domain.
+    Unequal finite domain cardinalities therefore rule out every Stage-5
+    comparison tuple. Nested comparison sets then remain empty at later stages.
+    """
+    q_lh = assignment_domain_lh()
+    q_lg = assignment_domain_lg()
+    lh_cardinality = len(q_lh)
+    lg_cardinality = len(q_lg)
+    stage4_identity_comparison_supplied = True
+    stage5_assignment_domain_bijection_impossible = lh_cardinality != lg_cardinality
+
+    if not stage4_identity_comparison_supplied:
+        raise AssertionError("The indexed witness must supply a Stage-4 comparison.")
+    if not stage5_assignment_domain_bijection_impossible:
+        raise AssertionError("The indexed witness no longer establishes the Stage-5 cardinality obstruction.")
+
+    stage_profile = (True, True, True, True, True, False, False, False)
+    first_branching_index = next(i for i, nonempty in enumerate(stage_profile) if not nonempty)
+
+    return {
+        "LH_assignment_domain_cardinality": lh_cardinality,
+        "LG_assignment_domain_cardinality": lg_cardinality,
+        "stage4_identity_comparison_supplied": stage4_identity_comparison_supplied,
+        "stage5_assignment_domain_bijection_impossible": stage5_assignment_domain_bijection_impossible,
+        "stage_comparison_nonempty": list(stage_profile),
+        "indexed_first_branch": first_branching_index,
+    }
 
 
 def assigned_value_lh(index: int, role: Role) -> int:
@@ -212,6 +257,7 @@ def enumerate_indexed_witness() -> tuple[dict[str, object], list[dict[str, objec
             }
         )
 
+    branching = derive_indexed_first_branch()
     summary = {
         "indexed_configurations": len(rows),
         "LH_channels": total_lh,
@@ -221,7 +267,7 @@ def enumerate_indexed_witness() -> tuple[dict[str, object], list[dict[str, objec
         "composite_coincidences_among_mismatches": coincidences,
         "agreement_range": [0, 124],
         "first_mismatch_index": 125,
-        "indexed_first_branch": 5,
+        **branching,
         "LG_composite_is_zero_for_every_index": all(row["LG_composite"] == 0 for row in rows),
         "LH_zero_mismatch_range": [125, 251],
     }
@@ -243,9 +289,22 @@ def proof_obligation_audit() -> dict[str, object]:
         and one_point.composite_singleton == 0,
         "d2_stage_profile": list(d2.stage_comparison_nonempty),
         "d2_first_branching_index": d2.first_branching_index,
+        "indexed_stage_profile": indexed["stage_comparison_nonempty"],
+        "indexed_stage4_identity_comparison_supplied": indexed["stage4_identity_comparison_supplied"],
+        "indexed_stage5_assignment_domain_bijection_impossible": indexed[
+            "stage5_assignment_domain_bijection_impossible"
+        ],
+        "indexed_assignment_domain_cardinalities_verified": indexed["LH_assignment_domain_cardinality"]
+        == EXPECTED["LH_assignment_domain_cardinality"]
+        and indexed["LG_assignment_domain_cardinality"] == EXPECTED["LG_assignment_domain_cardinality"],
         "stage_4_is_not_an_independent_first_branch_in_supplied_profiles": d2.first_branching_index != 4
         and indexed["indexed_first_branch"] != 4,
         "indexed_first_branching_index": indexed["indexed_first_branch"],
+        "indexed_first_branch_derived_from_stage5_cardinality_obstruction": indexed[
+            "stage4_identity_comparison_supplied"
+        ]
+        and indexed["stage5_assignment_domain_bijection_impossible"]
+        and indexed["indexed_first_branch"] == 5,
         "noninjective_composition_witness_verified": collision["composites_equal"],
         "expected_numeric_claims_verified": all(indexed[key] == value for key, value in EXPECTED.items() if key in indexed)
         and d2.first_branching_index == EXPECTED["d2_first_branch"],

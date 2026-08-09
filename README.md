@@ -15,10 +15,15 @@ The package deterministically verifies:
 - the synthetic indexed witness with first branching index `5`;
 - `768` admitted channels in `L_H`;
 - `1536` admitted channels in `L_G`;
+- assignment-domain cardinalities `768` in `L_H` and `1536` in `L_G`;
+- the resulting Stage-5 assignment-domain bijection obstruction;
+- the indexed first branch `5`, derived from the supplied Stage-4 identity comparison and that Stage-5 cardinality obstruction;
 - `387` index-aligned channel-structure mismatches;
 - `62` vertical-without-horizontal cases in `L_H`;
 - `127` full-family composite coincidences among the mismatched pairs;
 - a fully constructed finite witness that finite-sum composition need not be injective.
+
+The regression constant `indexed_first_branch = 5` remains in `EXPECTED` only as a check on the derived result. The executable path that produces the indexed first branch no longer assigns `5` directly.
 
 ## Requirements
 
@@ -51,4 +56,4 @@ python3 -m unittest discover -s tests -v
 
 ## Interpretation boundary
 
-The D2 and indexed constructions are formation-finite formal witnesses. The `3 x 3` index partition is part of the model definition and is not claimed to be a geometric invariant. The computational audit checks the explicitly finite consequences stated in the manuscript; it does not establish syntactic completeness, categoricity, decidability, or empirical validity.
+The D2 and indexed constructions are formation-finite formal witnesses. The `3 x 3` index partition is part of the model definition and is not claimed to be a geometric invariant. For the indexed witness, the manuscript supplies identity agreement through Stage 4; the executable package independently constructs the displayed Stage-5 assignment domains, checks their unequal finite cardinalities, and derives the resulting first branch. The computational audit checks these explicitly finite consequences; it does not establish the manuscript's general first-branching theorem, syntactic completeness, categoricity, decidability, or empirical validity.
