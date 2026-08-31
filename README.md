@@ -57,3 +57,9 @@ python3 -m unittest discover -s tests -v
 ## Interpretation boundary
 
 The D2 and indexed constructions are formation-finite formal witnesses. The `3 x 3` index partition is part of the model definition and is not claimed to be a geometric invariant. For the indexed witness, the manuscript supplies identity agreement through Stage 4; the executable package independently constructs the displayed Stage-5 assignment domains, checks their unequal finite cardinalities, and derives the resulting first branch. The computational audit checks these explicitly finite consequences; it does not establish the manuscript's general first-branching theorem, syntactic completeness, categoricity, decidability, or empirical validity.
+
+## Primitive-interface and Stage-0 boundary
+
+The executable package assumes the manuscript's regime-supplied primitive interface data; it does not derive the domain-specific content of expression describability, configuration admission, local coherence, or boundary compatibility. Likewise, `Res` is treated as a primitive restriction relation whose soundness and target admission are imposed by the manuscript's Primitive Axiom II rather than pre-encoded by the relation name.
+
+Stage `0` is bookkeeping for the inherited background and ambient comparison level, not an eighth formation stage. In stage profiles, failure at index `0` therefore means that the background or anchored-carrier comparison already fails before the Stage-I--VII formation comparison. The executable finite witnesses do not turn this interpretation boundary into a new computational theorem.
