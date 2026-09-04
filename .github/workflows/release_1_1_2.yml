@@ -1,0 +1,31 @@
+name: release-1.1.2
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "release/1.1.2.trigger"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create immutable 1.1.2 release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view 1.1.2 >/dev/null 2>&1; then
+            echo "Release 1.1.2 already exists; leaving it unchanged."
+            exit 0
+          fi
+          gh release create 1.1.2 \
+            --target "$GITHUB_SHA" \
+            --title "Formation_Axiom_System 1.1.2 — Audit-alignment patch" \
+            --notes-file RELEASE_NOTES_1.1.2.md
