@@ -1,5 +1,9 @@
 # Reproducibility protocol
 
+**v4.5 / 2026-10-22:** see [actual two-version GitHub Actions rerun](audits/v4.5/REPRODUCTION_RESULT.md) and [public Actions logs](https://github.com/dominicus9708/Formation_Axiom_System/actions/runs/39655845322). This unchanged-script check covers original finite counts and stage-profile regressions. It does **not** itself construct all of the newly explicit §7.3 57 full D2 material items, 9 retained items, six blocked slots, 30 remaining transmissive slots or H→h→p inherited records; those have separate source-locked N2 verification in the DSD Method Family repository. It also uses an alternative valid finite-sum noninjectivity witness to the literal v4.5 Proposition 5.14 instance. Keep versioned software replay and exact manuscript-instance reconstruction distinct.
+
+
+
 ## Environment
 
 - Python 3.10+
