@@ -1,5 +1,9 @@
 # Formation Axiom System reproducibility package
 
+**2026-10-22 / Manuscript Zenodo edition v4.5 audit:** the unchanged source scripts were **actually rerun** by [GitHub Actions #39655845322](https://github.com/dominicus9708/Formation_Axiom_System/actions/runs/39655845322) under Python **3.10 and 3.12**, both passing all 8 unit tests and original finite numerical outputs. [Version-specific results and source-fidelity boundaries](audits/v4.5/REPRODUCTION_RESULT.md); [prospective lock](audits/v4.5/REPRODUCTION_PRECOMMIT.md); [Notion v4.5 tracking](https://app.notion.com/p/40081f51e7fa817eb3eef873a93cd3b9). The 3×3 indexed experiment is numerically unchanged (768/1536, 387, 62, 127), indexed branching b=5 and existing D2 stage-profile b=3. The existing D2 code is a **lightweight stage-profile fixture**, not a literal reconstruction of v4.5's 57/9/6 material-boundary annotations; new-edition N2 provides a separate detailed checker. The noninjective-composition code is a **valid alternative finite example**, not a literal reproduction of the manuscript's one-material-item/three-role example. No original algorithms or expected constants were changed. This CI run is finite experiment verification, not formal proof of all manuscript theorems.
+
+
+
 This repository is the standard-library Python companion to:
 
 > Kwon Dominicus, *Formation Axiom System: Dimensional-Structural Describability*.
