@@ -1,5 +1,9 @@
 # Computational proof map
 
+**2026-10-22 v4.5 source-alignment qualification:** the existing D2 function asserts b=3 via a supplied stage-profile and boundary-permission inputs; it does not enumerate all material-slot/annotation inheritance records newly explicit in manuscript §7.3 (57 full items; nine retained; six exposed blocked slots). [Revised manuscript N2 code and JSON](https://github.com/dominicus9708/DSD_Method_Family/tree/main/DSD_Audit/audits/formal_proof/formation_axiom_system/versions/2026-10-22) are distinct supplementary executed evidence. The local noninjective-composition function models an alternative valid zero-sum collision using multiple material items, not the literal source Proposition 5.14 one-item/three-role data. These are **fidelity limitations**, not disproof of finite numerical outputs; see [new v4.5 CI replay](audits/v4.5/REPRODUCTION_RESULT.md).
+
+
+
 This map states what each executable check supports and what remains a manuscript proof.
 
 | Manuscript result or construction | Executable support | Scope |
