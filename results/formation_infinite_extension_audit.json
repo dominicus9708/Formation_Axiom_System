@@ -1,0 +1,52 @@
+{
+  "indexed_repetition_finite_control": {
+    "index_count": 2,
+    "indexed_sum": 2,
+    "set_cardinality": 1,
+    "set_sum": 1
+  },
+  "orthogonal_series_ell2_over_n": {
+    "cauchy_tail_norm_bounds": {
+      "10": 0.316227766017,
+      "100": 0.1,
+      "1000": 0.031622776602,
+      "10000": 0.01
+    },
+    "infinite_failure_of_absolute_convergence": "PROVED_BY_DIVERGENCE_OF_HARMONIC_SERIES",
+    "infinite_unconditional_convergence": "PROVED_BY_ORTHOGONAL_CAUCHY_TAILS",
+    "not_a_computer_proof": true,
+    "partial_sum_samples": {
+      "10": {
+        "absolute_norm_sum_harmonic": 2.928968253968,
+        "bounded_transport_partial_norm": 1.766561485564,
+        "ell2_partial_norm": 1.244896674896
+      },
+      "100": {
+        "absolute_norm_sum_harmonic": 5.18737751764,
+        "bounded_transport_partial_norm": 1.792936555187,
+        "ell2_partial_norm": 1.278664889713
+      },
+      "1000": {
+        "absolute_norm_sum_harmonic": 7.48547086055,
+        "bounded_transport_partial_norm": 1.795458112964,
+        "ell2_partial_norm": 1.282160117412
+      },
+      "3000": {
+        "absolute_norm_sum_harmonic": 8.583749889959,
+        "bounded_transport_partial_norm": 1.795643880449,
+        "ell2_partial_norm": 1.282419895769
+      }
+    }
+  },
+  "scope": "The executed finite calculations are illustrative controls only; all assertions about infinite families require the analytic proofs in the accompanying report.",
+  "source": "Formation v4.5 Appendix E and Static Aggregation Section 6",
+  "status": "PASS_FINITE_CONTROLS_WITH_ANALYTIC_PROOFS_SEPARATE",
+  "unbounded_algebraic_isomorphism": {
+    "J_on_orthonormal_vectors": "J(e_n)=n e_n",
+    "condition_tested": "boundedness is essential for the infinite covariance formula",
+    "divergent_transported_terms": "J(e_n/n)=e_n; terms do not tend to zero",
+    "exists_in_zfc": "Hamel-basis extension of the orthonormal sequence",
+    "proof_not_numerical": true,
+    "unconditionally_convergent_source": "sum e_n/n"
+  }
+}
