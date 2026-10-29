@@ -1,0 +1,77 @@
+{
+  "checks": {
+    "R1_R5_compatible_target_only_witness": {
+      "conclusion": "R1-R5 cannot replace independent witness-reflection clause",
+      "source_psi": false,
+      "target_psi": true,
+      "witness_reflection": false
+    },
+    "R4_12_partial_assignments": {
+      "accepted": [
+        [
+          null,
+          null
+        ],
+        [
+          null,
+          2
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cases": 12,
+      "new_target_assignment_outside_source_image": [
+        null,
+        2
+      ]
+    },
+    "R4_non_surjective_value_boundary": true,
+    "R4_plus_value_surjectivity": {
+      "accepted": [
+        [
+          null,
+          null
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "assignment_definedness_reflected": true,
+      "cases": 9
+    },
+    "external_predicate_application_scenarios": {
+      "assembly_boundary": {
+        "policy_truth_derived_by_formation": false,
+        "primitive_gate": "BC",
+        "source_describable": true,
+        "target_describable": false
+      },
+      "laboratory_local_coherence": {
+        "policy_truth_derived_by_formation": false,
+        "primitive_gate": "LC",
+        "source_describable": true,
+        "target_describable": false
+      },
+      "organization_admission": {
+        "policy_truth_derived_by_formation": false,
+        "primitive_gate": "Adm_cfg",
+        "source_describable": true,
+        "target_describable": false
+      }
+    }
+  },
+  "scope": "small finite source-bound tests; general Section 6 proof review separate",
+  "source": "Formation Axiom System v4.5, 2026-10-22",
+  "status": "PASS"
+}
