@@ -1,0 +1,233 @@
+{
+  "checks": {
+    "additional_source_item_in_target_expression_breaks_R1": {
+      "expected_failed_condition": "R1",
+      "observed": {
+        "F1": true,
+        "F2": true,
+        "F3": true,
+        "F4": true,
+        "F5": true,
+        "F6": true,
+        "R1": false,
+        "R2": true,
+        "R3": true,
+        "R4": true,
+        "R5": true,
+        "embedding": false,
+        "injective_maps": true,
+        "material_relation_embedding": true,
+        "source_channels": 2,
+        "target_channels": 5,
+        "witness_reflection": true
+      }
+    },
+    "annotation_mismatch_breaks_F1": {
+      "expected_failed_condition": "F1",
+      "observed": {
+        "F1": false,
+        "F2": true,
+        "F3": true,
+        "F4": true,
+        "F5": true,
+        "F6": true,
+        "R1": true,
+        "R2": true,
+        "R3": true,
+        "R4": true,
+        "R5": true,
+        "embedding": false,
+        "injective_maps": true,
+        "material_relation_embedding": true,
+        "source_channels": 2,
+        "target_channels": 5,
+        "witness_reflection": true
+      }
+    },
+    "configuration_boundary_change_breaks_R2": {
+      "expected_failed_condition": "R2",
+      "observed": {
+        "F1": true,
+        "F2": false,
+        "F3": true,
+        "F4": true,
+        "F5": true,
+        "F6": true,
+        "R1": true,
+        "R2": false,
+        "R3": true,
+        "R4": true,
+        "R5": true,
+        "embedding": false,
+        "injective_maps": true,
+        "material_relation_embedding": true,
+        "source_channels": 2,
+        "target_channels": 5,
+        "witness_reflection": true
+      }
+    },
+    "fixed_external_support_mismatch_breaks_F1": {
+      "expected_failed_condition": "F1",
+      "observed": {
+        "F1": false,
+        "F2": true,
+        "F3": true,
+        "F4": true,
+        "F5": true,
+        "F6": true,
+        "R1": true,
+        "R2": true,
+        "R3": true,
+        "R4": true,
+        "R5": true,
+        "embedding": false,
+        "injective_maps": true,
+        "material_relation_embedding": true,
+        "source_channels": 2,
+        "target_channels": 5,
+        "witness_reflection": true
+      }
+    },
+    "missing_term_transport_breaks_F6": {
+      "expected_failed_condition": "F6",
+      "observed": {
+        "F1": true,
+        "F2": true,
+        "F3": true,
+        "F4": true,
+        "F5": true,
+        "F6": false,
+        "R1": true,
+        "R2": true,
+        "R3": true,
+        "R4": true,
+        "R5": true,
+        "embedding": false,
+        "injective_maps": true,
+        "material_relation_embedding": true,
+        "source_channels": 2,
+        "target_channels": 5,
+        "witness_reflection": true
+      }
+    },
+    "new_in_image_assignment_breaks_R4": {
+      "expected_failed_condition": "R4",
+      "observed": {
+        "F1": true,
+        "F2": true,
+        "F3": true,
+        "F4": true,
+        "F5": true,
+        "F6": true,
+        "R1": true,
+        "R2": true,
+        "R3": true,
+        "R4": false,
+        "R5": true,
+        "embedding": false,
+        "injective_maps": true,
+        "material_relation_embedding": true,
+        "source_channels": 2,
+        "target_channels": 5,
+        "witness_reflection": true
+      }
+    },
+    "new_in_image_role_breaks_R5": {
+      "expected_failed_condition": "R5",
+      "observed": {
+        "F1": true,
+        "F2": true,
+        "F3": true,
+        "F4": true,
+        "F5": true,
+        "F6": true,
+        "R1": true,
+        "R2": true,
+        "R3": true,
+        "R4": true,
+        "R5": false,
+        "embedding": false,
+        "injective_maps": true,
+        "material_relation_embedding": true,
+        "source_channels": 2,
+        "target_channels": 5,
+        "witness_reflection": true
+      }
+    },
+    "relative_assignment_reflection_two_kinds": {
+      "R4": true,
+      "other_kind_phase_source_b_zero": true,
+      "source_energy_c_defined": false,
+      "target_energy_c_value": 2,
+      "value_in_source_energy_image": false
+    },
+    "target_only_source_tuple_breaks_material_embedding": {
+      "expected_failed_condition": "material_relation_embedding",
+      "observed": {
+        "F1": true,
+        "F2": true,
+        "F3": true,
+        "F4": true,
+        "F5": true,
+        "F6": true,
+        "R1": true,
+        "R2": true,
+        "R3": true,
+        "R4": true,
+        "R5": true,
+        "embedding": false,
+        "injective_maps": true,
+        "material_relation_embedding": false,
+        "source_channels": 2,
+        "target_channels": 5,
+        "witness_reflection": true
+      }
+    },
+    "target_original_realization_breaks_R3": {
+      "expected_failed_condition": "R3",
+      "observed": {
+        "F1": true,
+        "F2": true,
+        "F3": true,
+        "F4": true,
+        "F5": true,
+        "F6": true,
+        "R1": true,
+        "R2": true,
+        "R3": false,
+        "R4": true,
+        "R5": true,
+        "embedding": false,
+        "injective_maps": true,
+        "material_relation_embedding": true,
+        "source_channels": 2,
+        "target_channels": 5,
+        "witness_reflection": true
+      }
+    },
+    "valid_multi_kind_ternary_annotation_embedding": {
+      "F1": true,
+      "F2": true,
+      "F3": true,
+      "F4": true,
+      "F5": true,
+      "F6": true,
+      "R1": true,
+      "R2": true,
+      "R3": true,
+      "R4": true,
+      "R5": true,
+      "embedding": true,
+      "injective_maps": true,
+      "material_relation_embedding": true,
+      "source_channels": 2,
+      "target_channels": 5,
+      "witness_reflection": true
+    }
+  },
+  "conclusion": "10 finite fixtures passed their expectations; unrestricted theorem proof remains open",
+  "negative": 9,
+  "paper_sha256": "af721c4188a853880fcc896b80da494e4caa6000ab0af3131ee64cd0770fddfe",
+  "positive": 1,
+  "signature": "ternary relation; 2 kinds; external annotations and anchored support; Q^2 terms"
+}
