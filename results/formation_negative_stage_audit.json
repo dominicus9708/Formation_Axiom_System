@@ -1,0 +1,174 @@
+{
+  "closure_corruption": {
+    "IV_stale_derived_status": [
+      "CLOSURE_IV_STALE_DESCRIBABILITY"
+    ],
+    "VII_stale_composition": [
+      "CLOSURE_VII_INCORRECT_SUM"
+    ],
+    "VI_stale_derived_channels": [
+      "CLOSURE_VI_STALE_CHANNELS"
+    ]
+  },
+  "designed_branches": {
+    "0": {
+      "branch": 0,
+      "counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "1": {
+      "branch": 1,
+      "counts": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "2": {
+      "branch": 2,
+      "counts": [
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "3": {
+      "branch": 3,
+      "counts": [
+        2,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "5": {
+      "branch": 5,
+      "counts": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "6": {
+      "branch": 6,
+      "counts": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    "7": {
+      "branch": 7,
+      "counts": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    "nonzero_scalar_J": {
+      "branch": null,
+      "counts": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "strict_identity": {
+      "branch": null,
+      "counts": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "negative_cases": {
+    "F02_Described_not_admitted": [
+      "AXIOM_I_DES_IMPL_ADM"
+    ],
+    "F04_Admitted_expression_no_identity": [
+      "AXIOM_II_IDENTITY_RESTRICTION"
+    ],
+    "F04_Restriction_anchor_changed": [
+      "AXIOM_II_ANCHOR_INHERITANCE"
+    ],
+    "F04_Restriction_target_not_admitted": [
+      "AXIOM_II_TARGET_ADMISSION"
+    ],
+    "F05_Realization_anchor_changed": [
+      "AXIOM_III_REALIZATION_INHERITANCE"
+    ],
+    "F05_Realization_material_not_retained": [
+      "AXIOM_III_REALIZATION_INHERITANCE"
+    ],
+    "F06_Assignment_outside_described_material": [
+      "AXIOM_V_ASSIGNMENT_DOMAIN"
+    ]
+  },
+  "scope": "Negative Axiom I/II/III/V and closure corruption: 10 source-linked fixtures. Stage 0-7 comparison: finite one-kind, one-dimensional REAL term space, fixed value carrier {0,1}, empty material relations, common support anchor; all carrier bijections enumerated, scalar isomorphism existence solved exactly.",
+  "source_sha256": "af721c4188a853880fcc896b80da494e4caa6000ab0af3131ee64cd0770fddfe",
+  "status": "PASS_IN_DECLARED_FINITE_SIGNATURE",
+  "variant_family": {
+    "asymmetric_branch_cases": 0,
+    "branch_distribution_unordered": {
+      "1": 1600,
+      "2": 800,
+      "3": 672,
+      "5": 32,
+      "6": 44,
+      "7": 8,
+      "None": 84
+    },
+    "distinct_parameterized_models": 80,
+    "first_branch_4_cases": 0,
+    "note": "All bijections enumerated in the deliberately restricted signature; no claim about unrestricted infinite model classes.",
+    "unordered_pairs_with_diagonal": 3240
+  }
+}
