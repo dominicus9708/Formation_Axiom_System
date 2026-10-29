@@ -1,0 +1,51 @@
+{
+  "note": "A complete axiom-independence proof uses the explicit manuscript models; this checker certifies six selected witnesses and their nonempty formation kernel, not every interpretation.",
+  "relative_closure_no_independent_status_change": true,
+  "six_residual_single_fault_cases": [
+    {
+      "derived_channels": 1,
+      "residual_constraint": "i",
+      "sole_violated_residual": "AXIOM_I_DES_IMPL_ADM",
+      "source_fixture": "F02_Described_not_admitted",
+      "unaffected_active_kernel": true
+    },
+    {
+      "derived_channels": 1,
+      "residual_constraint": "ii",
+      "sole_violated_residual": "AXIOM_II_ANCHOR_INHERITANCE",
+      "source_fixture": "F04_Restriction_anchor_changed",
+      "unaffected_active_kernel": true
+    },
+    {
+      "derived_channels": 1,
+      "residual_constraint": "iii",
+      "sole_violated_residual": "AXIOM_II_TARGET_ADMISSION",
+      "source_fixture": "F04_Restriction_target_not_admitted",
+      "unaffected_active_kernel": true
+    },
+    {
+      "derived_channels": 1,
+      "residual_constraint": "iv",
+      "sole_violated_residual": "AXIOM_II_IDENTITY_RESTRICTION",
+      "source_fixture": "F04_Admitted_expression_no_identity",
+      "unaffected_active_kernel": true
+    },
+    {
+      "derived_channels": 1,
+      "residual_constraint": "v",
+      "sole_violated_residual": "AXIOM_III_REALIZATION_INHERITANCE",
+      "source_fixture": "F05_Realization_anchor_changed",
+      "unaffected_active_kernel": true
+    },
+    {
+      "derived_channels": 1,
+      "residual_constraint": "vi",
+      "sole_violated_residual": "AXIOM_V_ASSIGNMENT_DOMAIN",
+      "source_fixture": "F06_Assignment_outside_described_material",
+      "unaffected_active_kernel": true
+    }
+  ],
+  "source": "Formation v4.5 Theorem 4.7, Theorem 3.3, original Phase2 bounded fixtures",
+  "status": "PASS_FINITE_RESIDUAL_INDEPENDENCE_AND_RELATIVE_CLOSURE",
+  "valid_primitive_80_model_checks": 80
+}
