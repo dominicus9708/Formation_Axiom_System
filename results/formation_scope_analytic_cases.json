@@ -1,0 +1,26 @@
+{
+  "subset_sum_exhaustive": {
+    "total_term_triples": 125,
+    "injective_subset_sum_triples": 0,
+    "colliding_subset_sum_triples": 125,
+    "colliding_nonempty_triples": 125
+  },
+  "examples": {
+    "noninjective": {
+      "terms": [1, -1, 0],
+      "two_families": [[0, 1], [2]],
+      "same_sum": 0
+    },
+    "injective": {
+      "terms": [1, 2, 4],
+      "distinct_outputs": [0, 1, 2, 3, 4, 5, 6, 7]
+    }
+  },
+  "l2_unconditional_not_absolute": [
+    {"N":10,"l2_partial_norm":1.2448966748957686,"sum_of_term_norms":2.9289682539682538},
+    {"N":100,"l2_partial_norm":1.2786648897130526,"sum_of_term_norms":5.187377517639621},
+    {"N":1000,"l2_partial_norm":1.2821601174118464,"sum_of_term_norms":7.485470860550345},
+    {"N":10000,"l2_partial_norm":1.2825108466785222,"sum_of_term_norms":9.787606036044382}
+  ],
+  "interpretation": "finite 3-channel scalar term-map enumeration; optional infinite-dimensional extension illustrates difference between unconditional and absolute convergence"
+}
