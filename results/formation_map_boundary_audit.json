@@ -1,0 +1,103 @@
+{
+  "noninjective_forward_map": {
+    "forward_conditions": "F1-F6 satisfied in this finite example",
+    "image_composite": 1,
+    "interpretation": "noninjective channel map permits collision of finite set elements; Prop 6.3 needs the channel injection for composite covariance",
+    "role_map_injective": false,
+    "source_channels": 2,
+    "source_composite": 2,
+    "target_channels": 1
+  },
+  "scope": "finite correctly typed examples, not full general theorem proofs",
+  "source": "Formation Axiom System v4.5",
+  "strict_isomorphism_composition": {
+    "case_summaries": [
+      {
+        "admitted_channels": 2,
+        "first_branch_A_B": null,
+        "first_branch_A_C": null,
+        "first_branch_B_C": null,
+        "seed": 20262000
+      },
+      {
+        "admitted_channels": 0,
+        "first_branch_A_B": null,
+        "first_branch_A_C": null,
+        "first_branch_B_C": null,
+        "seed": 20262001
+      },
+      {
+        "admitted_channels": 1,
+        "first_branch_A_B": null,
+        "first_branch_A_C": null,
+        "first_branch_B_C": null,
+        "seed": 20262002
+      },
+      {
+        "admitted_channels": 0,
+        "first_branch_A_B": null,
+        "first_branch_A_C": null,
+        "first_branch_B_C": null,
+        "seed": 20262003
+      },
+      {
+        "admitted_channels": 3,
+        "first_branch_A_B": null,
+        "first_branch_A_C": null,
+        "first_branch_B_C": null,
+        "seed": 20262004
+      },
+      {
+        "admitted_channels": 0,
+        "first_branch_A_B": null,
+        "first_branch_A_C": null,
+        "first_branch_B_C": null,
+        "seed": 20262005
+      },
+      {
+        "admitted_channels": 1,
+        "first_branch_A_B": null,
+        "first_branch_A_C": null,
+        "first_branch_B_C": null,
+        "seed": 20262006
+      },
+      {
+        "admitted_channels": 0,
+        "first_branch_A_B": null,
+        "first_branch_A_C": null,
+        "first_branch_B_C": null,
+        "seed": 20262007
+      },
+      {
+        "admitted_channels": 1,
+        "first_branch_A_B": null,
+        "first_branch_A_C": null,
+        "first_branch_B_C": null,
+        "seed": 20262008
+      },
+      {
+        "admitted_channels": 0,
+        "first_branch_A_B": null,
+        "first_branch_A_C": null,
+        "first_branch_B_C": null,
+        "seed": 20262009
+      },
+      {
+        "admitted_channels": 1,
+        "first_branch_A_B": null,
+        "first_branch_A_C": null,
+        "first_branch_B_C": null,
+        "seed": 20262010
+      },
+      {
+        "admitted_channels": 0,
+        "first_branch_A_B": null,
+        "first_branch_A_C": null,
+        "first_branch_B_C": null,
+        "seed": 20262011
+      }
+    ],
+    "note": "12 independent typed source models, rename+invertible 2D transport twice; verifies selected triple compositions and inverses, not all morphisms",
+    "verified_isomorphism_triplets": 12
+  }
+}
