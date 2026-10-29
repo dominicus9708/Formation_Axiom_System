@@ -1,0 +1,42 @@
+name: Formation v4.5 phase-3 multisort audit
+
+on:
+  push:
+    paths:
+      - "src/formation_multisort_stage_audit.py"
+      - "src/formation_map_boundary_audit.py"
+      - "results/formation_multisort_stage_audit.json"
+      - "results/formation_map_boundary_audit.json"
+      - ".github/workflows/formation_phase3_audit.yml"
+  workflow_dispatch:
+
+jobs:
+  run_phase3:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Compile under warning-as-error discipline
+        run: |
+          python -W error -m py_compile src/formation_multisort_stage_audit.py src/formation_map_boundary_audit.py
+      - name: Regenerate independent multisort and map results
+        run: |
+          mkdir -p phase3-rebuilt
+          PYTHONHASHSEED=99 python -W error src/formation_multisort_stage_audit.py --output-dir phase3-rebuilt --seed 20261029 --base-models 24
+          PYTHONHASHSEED=99 python -W error src/formation_map_boundary_audit.py --output-dir phase3-rebuilt
+      - name: Compare exact file bytes with archived audit
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          for name in ('formation_multisort_stage_audit.json', 'formation_map_boundary_audit.json'):
+              expected = Path('results') / name
+              rebuilt = Path('phase3-rebuilt') / name
+              assert expected.read_bytes() == rebuilt.read_bytes(), f'not reproducible: {name}'
+              print('REPRODUCED', name)
+          PY
