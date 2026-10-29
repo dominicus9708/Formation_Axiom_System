@@ -1,0 +1,88 @@
+{
+  "case_count": 14,
+  "cases": {
+    "S01_admission_not_sufficient": {
+      "describable_unrelated_expression": false,
+      "pass": true
+    },
+    "S02_restriction_nontransitivity": {
+      "direct_edge": false,
+      "pass": true,
+      "two_link_chain": true
+    },
+    "S03_multiple_traces_one_channel": {
+      "channels": 1,
+      "pass": true,
+      "traces": 2
+    },
+    "S04_assigned_zero_term_nonzero": {
+      "assignment": 0,
+      "pass": true,
+      "term": 1
+    },
+    "S05_describable_but_no_assignment_channels": {
+      "channels": 0,
+      "described_configurations": 1,
+      "pass": true
+    },
+    "S06_assigned_but_no_role_channels": {
+      "channels": 0,
+      "pass": true
+    },
+    "S07_absent_channel_not_zero_term": {
+      "absent_role": "s",
+      "pass": true,
+      "term_undefined": true
+    },
+    "S08_noninjective_composition_exact_source_structure": {
+      "equal_sum": 0,
+      "pass": true,
+      "roles": 3
+    },
+    "S09_injective_composition_is_possible": {
+      "pass": true,
+      "unique_subset_outputs": 8
+    },
+    "S10_undefined_zero_negligible_nonzero": {
+      "defined_zero_material": "b",
+      "delta": "1/100",
+      "limitation": "size function and threshold explicitly supplied for this witness",
+      "nonzero_negligible_material": "a",
+      "pass": true,
+      "size": "1/1000",
+      "undefined_material": "c"
+    },
+    "S11_strict_isomorphism_scaling_composition": {
+      "first_branch": null,
+      "linear_scales": [
+        "3",
+        "5",
+        "15"
+      ],
+      "pass": true
+    },
+    "S12_unused_candidate_matters_to_strict_equivalence": {
+      "admitted_channel_counts": [
+        1,
+        1
+      ],
+      "first_branch": 0,
+      "pass": true
+    },
+    "S13_heterogeneous_support_anchors": {
+      "pass": true,
+      "retained_items": 1,
+      "supports": 2
+    },
+    "S14_regime_global_assignment_across_two_configs": {
+      "assigned_values": [
+        1
+      ],
+      "pass": true,
+      "same_material_channels": 2
+    }
+  },
+  "scope": "selected finite full models only; no empirical validity or universal theorem proof",
+  "source": "Formation v4.5 2026-10-22",
+  "valid_full_model_instances": 14
+}
