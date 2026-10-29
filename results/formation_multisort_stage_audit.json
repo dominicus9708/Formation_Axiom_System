@@ -1,0 +1,85 @@
+{
+  "base_models": 24,
+  "code": "formation_multisort_stage_audit.py",
+  "first_branch_distribution": {
+    "0": 896,
+    "1": 140,
+    "2": 44,
+    "3": 16,
+    "5": 8,
+    "None": 72
+  },
+  "limitations": "finite 2 material, 2 expression, 2 configuration, 2 kinds, 2 roles, 2D rational term-space, fixed {0,1,2} values; all candidate bijections enumerated; not universal proof",
+  "nonempty_channel_models": 32,
+  "renamed_pair_equivalence_checks": 24,
+  "seed": 20261029,
+  "source": "Formation Axiom System v4.5",
+  "source_sha256": "af721c4188a853880fcc896b80da494e4caa6000ab0af3131ee64cd0770fddfe",
+  "special_cases": {
+    "base_anchor_stage0": {
+      "counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "first_branch": 0
+    },
+    "different_negligible_status": {
+      "counts": [
+        16,
+        16,
+        16,
+        16,
+        16,
+        0,
+        0,
+        0
+      ],
+      "first_branch": 5
+    },
+    "equal_full_sum_different_term_rank": {
+      "source_rank": 2,
+      "stage_profile": {
+        "counts": [
+          16,
+          16,
+          16,
+          16,
+          16,
+          4,
+          4,
+          0
+        ],
+        "first_branch": 7
+      },
+      "sum": [
+        "1",
+        "1"
+      ],
+      "target_rank": 1
+    },
+    "role_cardinality_stage6": {
+      "counts": [
+        16,
+        16,
+        16,
+        16,
+        16,
+        4,
+        0,
+        0
+      ],
+      "first_branch": 6
+    }
+  },
+  "stage4_first_branch": 0,
+  "status": "PASS_IN_RESTRICTED_SIGNATURE",
+  "tested_models": 48,
+  "transformed_strict_isomorphs": 24,
+  "unordered_model_pairs_including_self": 1176
+}
