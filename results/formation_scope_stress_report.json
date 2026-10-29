@@ -1,0 +1,31 @@
+{
+  "boundary_case_count": 13,
+  "boundary_case_outcomes": {
+    "admission_not_sufficient": true,
+    "assigned_zero_can_have_nonzero_term": true,
+    "defined_zero_not_undefined": true,
+    "distinct_nonempty_composites_can_collide": true,
+    "finite_set_repetition_collapses": true,
+    "fixed_J_separately_prescribed_failure": true,
+    "infinite_series_outside_core": true,
+    "linear_isomorphism_zero_nonzero_obstruction": true,
+    "nonempty_family_needed_for_composite_coincidence": true,
+    "partial_global_assignment_does_not_force_roles": true,
+    "restriction_nontransitivity_allowed": true,
+    "same_value_cross_context_conflict_illegal": true,
+    "zero_channels_empty_sum": true
+  },
+  "conclusion": "All assertions passed; theoretical and physical applicability remain distinct",
+  "results": {
+    "models_nonempty_channels": 205,
+    "models_valid": 400,
+    "models_with_defined_zero": 97,
+    "models_with_multiple_channels": 104,
+    "models_with_nondesc_candidate": 400,
+    "renamed_models_valid": 400
+  },
+  "scope": "finite small-signature synthetic tests, not universal proof",
+  "seed": 20261029,
+  "source": "DSD Formation Axiom System, v4.5 (2026-10-22)",
+  "trials": 400
+}
