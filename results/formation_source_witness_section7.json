@@ -1,0 +1,24 @@
+{
+  "D2": {
+    "blocked_exposed_slots": 6,
+    "directional_slot_items": 36,
+    "edge_items": 12,
+    "first_branch_under_identical_prior_stages": 3,
+    "retained_material": 9,
+    "source_policy": "BC_Lplus(p)=True; BC_Lminus(p)=False (primitive inputs)",
+    "transmissive_other_slots": 30,
+    "vertex_items": 9,
+    "whole_grid_material": 57
+  },
+  "indexed_3x3": {
+    "G_channels": 1536,
+    "H_channels": 768,
+    "first_branch_by_distinct_assignment_domain_cardinality": 5,
+    "full_family_composite_coincidences": 127,
+    "index_count": 512,
+    "mismatched_configuration_families": 387,
+    "vertical_only": 62
+  },
+  "limits": "not the full typed primitive-record verification; source N2 contains separate inheritance checker",
+  "source": "Formation v4.5 §7.3–7.4; supplementary independent combinatorics"
+}
