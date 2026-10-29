@@ -1,0 +1,45 @@
+name: Formation v4.5 phase-6 theorems and infinite-series checks
+
+on:
+  push:
+    paths:
+      - "src/formation_infinite_extension_audit.py"
+      - "src/formation_residual_dependency_audit.py"
+      - "src/formation_source_witness_section7.py"
+      - "results/formation_infinite_extension_audit.json"
+      - "results/formation_residual_dependency_audit.json"
+      - "results/formation_source_witness_section7.json"
+      - ".github/workflows/formation_phase6_theorem_infinite_audit.yml"
+  workflow_dispatch:
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Validate Python syntax
+        run: |
+          python -W error -m py_compile src/formation_infinite_extension_audit.py src/formation_residual_dependency_audit.py src/formation_source_witness_section7.py
+      - name: Recompute bounded finite evidence
+        run: |
+          mkdir -p replay-out
+          PYTHONHASHSEED=731 python -W error src/formation_infinite_extension_audit.py --output-dir replay-out
+          PYTHONHASHSEED=731 python -W error src/formation_residual_dependency_audit.py --output-dir replay-out
+          PYTHONHASHSEED=731 python -W error src/formation_source_witness_section7.py --output-dir replay-out
+      - name: Assert byte-identical frozen outputs
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          for name in ('formation_infinite_extension_audit.json','formation_residual_dependency_audit.json','formation_source_witness_section7.json'):
+              expected = (Path('results') / name).read_bytes()
+              actual = (Path('replay-out') / name).read_bytes()
+              assert expected == actual, 'Nonreproducible output: ' + name
+              print('REPRODUCED', name)
+          PY
