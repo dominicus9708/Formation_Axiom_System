@@ -1,0 +1,105 @@
+{
+  "composite_J": [
+    [
+      "3",
+      "2"
+    ],
+    [
+      "1",
+      "1"
+    ]
+  ],
+  "finite_source_channel_subsets": 4,
+  "limitations": "one concrete triple with 2D rational terms; not general theorem proof",
+  "pairwise_embeddings": {
+    "L_to_M": {
+      "F1": true,
+      "F2": true,
+      "F3": true,
+      "F4": true,
+      "F5": true,
+      "F6": true,
+      "R1": true,
+      "R2": true,
+      "R3": true,
+      "R4": true,
+      "R5": true,
+      "embedding": true,
+      "injective_maps": true,
+      "material_relation_embedding": true,
+      "source_channels": 2,
+      "target_channels": 5,
+      "witness_reflection": true
+    },
+    "L_to_N": {
+      "F1": true,
+      "F2": true,
+      "F3": true,
+      "F4": true,
+      "F5": true,
+      "F6": true,
+      "R1": true,
+      "R2": true,
+      "R3": true,
+      "R4": true,
+      "R5": true,
+      "embedding": true,
+      "injective_maps": true,
+      "material_relation_embedding": true,
+      "source_channels": 2,
+      "target_channels": 7,
+      "witness_reflection": true
+    },
+    "M_to_N": {
+      "F1": true,
+      "F2": true,
+      "F3": true,
+      "F4": true,
+      "F5": true,
+      "F6": true,
+      "R1": true,
+      "R2": true,
+      "R3": true,
+      "R4": true,
+      "R5": true,
+      "embedding": true,
+      "injective_maps": true,
+      "material_relation_embedding": true,
+      "source_channels": 5,
+      "target_channels": 7,
+      "witness_reflection": true
+    }
+  },
+  "positive_composition_associativity": true,
+  "selected_families": [
+    {
+      "family_size": 0,
+      "transported_sum": [
+        "0",
+        "0"
+      ]
+    },
+    {
+      "family_size": 1,
+      "transported_sum": [
+        "3",
+        "1"
+      ]
+    },
+    {
+      "family_size": 1,
+      "transported_sum": [
+        "2",
+        "1"
+      ]
+    },
+    {
+      "family_size": 2,
+      "transported_sum": [
+        "5",
+        "2"
+      ]
+    }
+  ],
+  "three_valid_full_models": 3
+}
