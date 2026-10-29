@@ -50,11 +50,17 @@ This is exhaustive only **within the selected finite model and candidate-map fam
 **Status:** PASS selected multisort finite checks; universal mathematical review and external empirical assessment NOT COMPLETE.
 
 ## Local execution source and outputs
-The two independently executed scripts and generated results are in the user's Phase-3 audit bundle, with SHA256 entries. The original baseline Python source and v4.5 published data remain unchanged.
+The independently executed scripts and exact generated JSON files have now been committed to this repository and cross-checked against the locally executed bytes by matching Git object IDs. The original baseline Python source and v4.5 published data remain unchanged.
+
+- [Multisort and GL2 stage checker](../../src/formation_multisort_stage_audit.py)
+- [Forward-map collision and composition checker](../../src/formation_map_boundary_audit.py)
+- [Multisort result JSON](../../results/formation_multisort_stage_audit.json)
+- [Forward-map result JSON](../../results/formation_map_boundary_audit.json)
+- [Python 3.10/3.12 independent CI replay](../../.github/workflows/formation_phase3_audit.yml): **workflow installed; completion has not yet been confirmed by observing a run**.
 
 - `formation_multisort_stage_audit.py`: SHA256 `97d657adcc74a5a159dfa439482ce8d101817aa4542f7e3645ff2d83f01c5853`
 - `formation_map_boundary_audit.py`: SHA256 `76a327d4f56a44c66d533a7e428eb9f2b723daca63f575963435a9372b771a47`
 - `formation_multisort_stage_audit.json`: SHA256 `895034e903f2f14f554ce8d87c9f891a4a0fc905f0180d09cf52bc6ae762b8c8`
 - `formation_map_boundary_audit.json`: SHA256 `e712fedf6a528674b51ded0eacc77573df53fefdbf716076af1430f46c383e7a`
 
-The complete executable code is not embedded in this report: it is identified by the SHA256 manifest in the locally provided reproducibility bundle.
+The full executable source files and their generated JSON are linked above; the hash manifest in the user's local bundle provides additional custody evidence.
