@@ -1,0 +1,37 @@
+name: Formation v4.5 Phase8 Stage7 obstruction audit
+
+on:
+  push:
+    paths:
+      - "src/formation_phase8_stage7_obstruction_audit.py"
+      - "results/formation_phase8_stage7_obstructions.json"
+      - ".github/workflows/formation_phase8_stage7_audit.yml"
+  workflow_dispatch:
+
+jobs:
+  exact_rational_replay:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Compile and run
+        run: |
+          python -W error -m py_compile src/formation_phase8_stage7_obstruction_audit.py
+          mkdir -p phase8-output
+          PYTHONHASHSEED=731 python -W error src/formation_phase8_stage7_obstruction_audit.py --output-dir phase8-output
+      - name: Compare exact generated output to frozen evidence
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          file='formation_phase8_stage7_obstructions.json'
+          expected=(Path('results')/file).read_bytes()
+          generated=(Path('phase8-output')/file).read_bytes()
+          assert expected==generated, 'Phase8 Stage7 result mismatch'
+          print('REPRODUCED', file)
+          PY
