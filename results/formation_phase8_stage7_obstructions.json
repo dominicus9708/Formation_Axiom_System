@@ -33,7 +33,7 @@
     "same_rank_different_linear_dependence": {
       "first_branch": 7,
       "reverse_first_branch": 7,
-      "source_rowspace_rank": 2,
+      "source_rowspace_rank": 1,
       "source_term_dimension": 2,
       "stage_7_nonempty": false,
       "stages_0_through_6_nonempty": true,
