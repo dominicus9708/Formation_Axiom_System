@@ -1,0 +1,58 @@
+{
+  "cases": {
+    "invertible_term_transport": {
+      "first_branch": null,
+      "reverse_first_branch": null,
+      "source_rowspace_rank": 2,
+      "source_term_dimension": 2,
+      "stage_7_nonempty": true,
+      "stages_0_through_6_nonempty": true,
+      "target_rowspace_rank": 2,
+      "target_term_dimension": 2
+    },
+    "rank_obstruction_same_finite_sum": {
+      "first_branch": 7,
+      "reverse_first_branch": 7,
+      "source_rowspace_rank": 2,
+      "source_term_dimension": 2,
+      "stage_7_nonempty": false,
+      "stages_0_through_6_nonempty": true,
+      "target_rowspace_rank": 1,
+      "target_term_dimension": 2
+    },
+    "roles_relabel_and_invertible_transport": {
+      "first_branch": null,
+      "reverse_first_branch": null,
+      "source_rowspace_rank": 2,
+      "source_term_dimension": 2,
+      "stage_7_nonempty": true,
+      "stages_0_through_6_nonempty": true,
+      "target_rowspace_rank": 2,
+      "target_term_dimension": 2
+    },
+    "same_rank_different_linear_dependence": {
+      "first_branch": 7,
+      "reverse_first_branch": 7,
+      "source_rowspace_rank": 2,
+      "source_term_dimension": 2,
+      "stage_7_nonempty": false,
+      "stages_0_through_6_nonempty": true,
+      "target_rowspace_rank": 1,
+      "target_term_dimension": 2
+    },
+    "term_space_dimension_obstruction": {
+      "first_branch": 7,
+      "reverse_first_branch": 7,
+      "source_rowspace_rank": 2,
+      "source_term_dimension": 2,
+      "stage_7_nonempty": false,
+      "stages_0_through_6_nonempty": true,
+      "target_rowspace_rank": 1,
+      "target_term_dimension": 1
+    }
+  },
+  "core_proof_condition": "GL_d(Q) term transport exists iff the source and target term matrices have equal kernels and equal ambient dimension; possible role bijections enumerated.",
+  "note": "Pairwise exact rational tests on two-channel full models; stages0-6 survive because primitive structures are identical up to role renaming. The general theorems still require mathematical proof.",
+  "number_of_checked_pairs": 5,
+  "status": "PASS_FINITE_STAGE7_OBSTRUCTIONS_AND_STRICT_ISOMORPHISMS"
+}
