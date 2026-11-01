@@ -1,0 +1,293 @@
+{
+  "claims_requiring_math_review": 46,
+  "claims_with_direct_unlabeled_derivation": 13,
+  "claims_with_explicit_proof": 33,
+  "definitions_countermodels_remarks": 23,
+  "non_proof_numbered_items": [
+    "Definition 2.1",
+    "Definition 2.2",
+    "Definition 2.3",
+    "Definition 2.4",
+    "Remark 3.1",
+    "Remark 3.2",
+    "Remark 3.4",
+    "Definition 3.5",
+    "Countermodel 4.1",
+    "Countermodel 4.2",
+    "Countermodel 4.3",
+    "Countermodel 4.4",
+    "Countermodel 4.9",
+    "Definition 5.1",
+    "Countermodel 5.10",
+    "Definition 6.1",
+    "Definition 6.2",
+    "Definition 6.4",
+    "Remark 6.9",
+    "Definition 6.10",
+    "Remark 6.13",
+    "Definition 6.15",
+    "Definition 6.21"
+  ],
+  "numbered_items": 69,
+  "proof_index": [
+    {
+      "claim": "Proposition 2.5",
+      "explicit_named_references": [],
+      "presentation": "EXPLICIT_PROOF_PARAGRAPH"
+    },
+    {
+      "claim": "Theorem 3.3",
+      "explicit_named_references": [
+        "Definition 2.2"
+      ],
+      "presentation": "EXPLICIT_PROOF_PARAGRAPH"
+    },
+    {
+      "claim": "Theorem 3.6",
+      "explicit_named_references": [],
+      "presentation": "EXPLICIT_PROOF_PARAGRAPH"
+    },
+    {
+      "claim": "Theorem 4.5",
+      "explicit_named_references": [
+        "Theorem 3.3"
+      ],
+      "presentation": "EXPLICIT_PROOF_PARAGRAPH"
+    },
+    {
+      "claim": "Proposition 4.6",
+      "explicit_named_references": [],
+      "presentation": "EXPLICIT_PROOF_PARAGRAPH"
+    },
+    {
+      "claim": "Theorem 4.7",
+      "explicit_named_references": [],
+      "presentation": "EXPLICIT_PROOF_PARAGRAPH"
+    },
+    {
+      "claim": "Corollary 4.8",
+      "explicit_named_references": [],
+      "presentation": "EXPLICIT_PROOF_PARAGRAPH"
+    },
+    {
+      "claim": "Lemma 4.10",
+      "explicit_named_references": [],
+      "presentation": "EXPLICIT_PROOF_PARAGRAPH"
+    },
+    {
+      "claim": "Corollary 4.11",
+      "manual_proof_obligation_note": "Repeat Lemma 4.10 along a finite restriction chain; induction on n.",
+      "presentation": "DIRECT_UNLABELED_DERIVATION"
+    },
+    {
+      "claim": "Proposition 4.12",
+      "explicit_named_references": [],
+      "presentation": "EXPLICIT_PROOF_PARAGRAPH"
+    },
+    {
+      "claim": "Lemma 4.13",
+      "explicit_named_references": [],
+      "presentation": "EXPLICIT_PROOF_PARAGRAPH"
+    },
+    {
+      "claim": "Corollary 4.14",
+      "explicit_named_references": [],
+      "presentation": "EXPLICIT_PROOF_PARAGRAPH"
+    },
+    {
+      "claim": "Proposition 5.2",
+      "explicit_named_references": [],
+      "presentation": "EXPLICIT_PROOF_PARAGRAPH"
+    },
+    {
+      "claim": "Corollary 5.3",
+      "manual_proof_obligation_note": "Partial-function domain: q(a) undefined outside Q, distinct from pointed zero.",
+      "presentation": "DIRECT_UNLABELED_DERIVATION"
+    },
+    {
+      "claim": "Proposition 5.4",
+      "manual_proof_obligation_note": "Directly calculate the two branches of the total zero-padding definition.",
+      "presentation": "DIRECT_UNLABELED_DERIVATION"
+    },
+    {
+      "claim": "Proposition 5.5",
+      "explicit_named_references": [],
+      "presentation": "EXPLICIT_PROOF_PARAGRAPH"
+    },
+    {
+      "claim": "Proposition 5.6",
+      "explicit_named_references": [],
+      "presentation": "EXPLICIT_PROOF_PARAGRAPH"
+    },
+    {
+      "claim": "Corollary 5.7",
+      "manual_proof_obligation_note": "Take the contrapositive of the Clause VI conjunction.",
+      "presentation": "DIRECT_UNLABELED_DERIVATION"
+    },
+    {
+      "claim": "Proposition 5.8",
+      "explicit_named_references": [],
+      "presentation": "EXPLICIT_PROOF_PARAGRAPH"
+    },
+    {
+      "claim": "Proposition 5.9",
+      "manual_proof_obligation_note": "Substitute the defined zero graph-pair in Closure Clause VI.",
+      "presentation": "DIRECT_UNLABELED_DERIVATION"
+    },
+    {
+      "claim": "Proposition 5.11",
+      "manual_proof_obligation_note": "Different role coordinates yield distinct admitted five-tuples.",
+      "presentation": "DIRECT_UNLABELED_DERIVATION"
+    },
+    {
+      "claim": "Proposition 5.12",
+      "manual_proof_obligation_note": "T is declared only on C; absent candidates are outside dom(T).",
+      "presentation": "DIRECT_UNLABELED_DERIVATION"
+    },
+    {
+      "claim": "Proposition 5.13",
+      "manual_proof_obligation_note": "The defined zero-extension sends both a missing candidate and a zero-valued present channel to zero under the explicit coexistence hypothesis.",
+      "presentation": "DIRECT_UNLABELED_DERIVATION"
+    },
+    {
+      "claim": "Proposition 5.14",
+      "explicit_named_references": [],
+      "presentation": "EXPLICIT_PROOF_PARAGRAPH"
+    },
+    {
+      "claim": "Proposition 6.3",
+      "explicit_named_references": [],
+      "presentation": "EXPLICIT_PROOF_PARAGRAPH"
+    },
+    {
+      "claim": "Theorem 6.5",
+      "explicit_named_references": [],
+      "presentation": "EXPLICIT_PROOF_PARAGRAPH"
+    },
+    {
+      "claim": "Corollary 6.6",
+      "explicit_named_references": [
+        "Theorem 6.5"
+      ],
+      "presentation": "EXPLICIT_PROOF_PARAGRAPH"
+    },
+    {
+      "claim": "Corollary 6.7",
+      "explicit_named_references": [
+        "Theorem 6.5"
+      ],
+      "presentation": "EXPLICIT_PROOF_PARAGRAPH"
+    },
+    {
+      "claim": "Theorem 6.8",
+      "explicit_named_references": [
+        "Proposition 6.3"
+      ],
+      "presentation": "EXPLICIT_PROOF_PARAGRAPH"
+    },
+    {
+      "claim": "Proposition 6.11",
+      "explicit_named_references": [
+        "Definition 6.4"
+      ],
+      "presentation": "EXPLICIT_PROOF_PARAGRAPH"
+    },
+    {
+      "claim": "Corollary 6.12",
+      "explicit_named_references": [],
+      "presentation": "EXPLICIT_PROOF_PARAGRAPH"
+    },
+    {
+      "claim": "Theorem 6.14",
+      "explicit_named_references": [],
+      "presentation": "EXPLICIT_PROOF_PARAGRAPH"
+    },
+    {
+      "claim": "Theorem 6.16",
+      "explicit_named_references": [
+        "Definition 6.10"
+      ],
+      "presentation": "EXPLICIT_PROOF_PARAGRAPH"
+    },
+    {
+      "claim": "Theorem 6.17",
+      "explicit_named_references": [],
+      "presentation": "EXPLICIT_PROOF_PARAGRAPH"
+    },
+    {
+      "claim": "Corollary 6.18",
+      "explicit_named_references": [
+        "Theorem 6.17"
+      ],
+      "presentation": "EXPLICIT_PROOF_PARAGRAPH"
+    },
+    {
+      "claim": "Theorem 6.19",
+      "explicit_named_references": [],
+      "presentation": "EXPLICIT_PROOF_PARAGRAPH"
+    },
+    {
+      "claim": "Theorem 6.20",
+      "explicit_named_references": [
+        "Corollary 6.18",
+        "Proposition 2.5",
+        "Proposition 6.11",
+        "Theorem 3.3",
+        "Theorem 6.14",
+        "Theorem 6.16",
+        "Theorem 6.17",
+        "Theorem 6.19",
+        "Theorem 6.5"
+      ],
+      "presentation": "EXPLICIT_PROOF_PARAGRAPH"
+    },
+    {
+      "claim": "Proposition 6.22",
+      "explicit_named_references": [],
+      "presentation": "EXPLICIT_PROOF_PARAGRAPH"
+    },
+    {
+      "claim": "Theorem 6.23",
+      "explicit_named_references": [],
+      "presentation": "EXPLICIT_PROOF_PARAGRAPH"
+    },
+    {
+      "claim": "Corollary 6.24",
+      "manual_proof_obligation_note": "Assignment-domain equivalence E5 is necessary for every strict isomorphism.",
+      "presentation": "DIRECT_UNLABELED_DERIVATION"
+    },
+    {
+      "claim": "Corollary 6.25",
+      "manual_proof_obligation_note": "Role preservation/reflection E8 is necessary for every strict isomorphism.",
+      "presentation": "DIRECT_UNLABELED_DERIVATION"
+    },
+    {
+      "claim": "Corollary 6.26",
+      "manual_proof_obligation_note": "An induced bijection on admitted channels is necessary for every strict isomorphism.",
+      "presentation": "DIRECT_UNLABELED_DERIVATION"
+    },
+    {
+      "claim": "Theorem 7.1",
+      "explicit_named_references": [],
+      "presentation": "EXPLICIT_PROOF_PARAGRAPH"
+    },
+    {
+      "claim": "Corollary 7.2",
+      "manual_proof_obligation_note": "Theorem 7.1 provides a finite set-coded witness in ZFC; choose a finite field.",
+      "presentation": "DIRECT_UNLABELED_DERIVATION"
+    },
+    {
+      "claim": "Theorem 7.3",
+      "explicit_named_references": [],
+      "presentation": "EXPLICIT_PROOF_PARAGRAPH"
+    },
+    {
+      "claim": "Corollary 7.4",
+      "manual_proof_obligation_note": "Theorem 7.3 applied to material carriers of each finite cardinality n.",
+      "presentation": "DIRECT_UNLABELED_DERIVATION"
+    }
+  ],
+  "source_sha256": "af721c4188a853880fcc896b80da494e4caa6000ab0af3131ee64cd0770fddfe",
+  "status": "PASS_SOURCE_INVENTORY_ONLY",
+  "warning": "Extracted explicit references are not an exhaustive dependency graph. Every claim still requires a mathematical premise-to-conclusion check, and a finite example is never a general proof."
+}
