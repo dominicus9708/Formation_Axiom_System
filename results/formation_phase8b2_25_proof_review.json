@@ -1,0 +1,187 @@
+{
+  "formal_proof_certification": "OPEN",
+  "limitation": "Argument review and source coverage, not theorem-prover formalization; further criticism may find errors.",
+  "paper_author": "Kwon Dominicus",
+  "proofs": [
+    {
+      "item": "Proposition 2.5",
+      "pdf_page": 6,
+      "premise_to_conclusion_check": "Record projections erase nested coordinates; erasing by stages composes associatively.",
+      "printed_proof_present": true,
+      "review_status": "SUPPORTED_UNDER_DEFINITIONS"
+    },
+    {
+      "item": "Theorem 3.6",
+      "pdf_page": 9,
+      "premise_to_conclusion_check": "Membership in C iff the existential structural trace exists by Clauses IV and VI; T is defined exactly on C.",
+      "printed_proof_present": true,
+      "review_status": "SUPPORTED_UNDER_DEFINITIONS"
+    },
+    {
+      "item": "Theorem 4.5",
+      "pdf_page": 10,
+      "premise_to_conclusion_check": "Countermodels 4.1-4.4 retain a nonempty common formation kernel and each violates only its named primitive axiom; closure is defined even for a typed counterinterpretation.",
+      "printed_proof_present": true,
+      "review_status": "SUPPORTED_WITH_SOURCE_COUNTERMODELS"
+    },
+    {
+      "item": "Proposition 4.6",
+      "pdf_page": 10,
+      "premise_to_conclusion_check": "Equality of anchor functions forces restriction-domain inclusion; induced relational substructures and a single partial function make remaining clauses dependent.",
+      "printed_proof_present": true,
+      "review_status": "SUPPORTED_UNDER_DECLARED_TYPING"
+    },
+    {
+      "item": "Corollary 4.8",
+      "pdf_page": 11,
+      "premise_to_conclusion_check": "Contrapositive of Primitive Axiom I.",
+      "printed_proof_present": true,
+      "review_status": "SUPPORTED_BY_LOGIC"
+    },
+    {
+      "item": "Lemma 4.10",
+      "pdf_page": 11,
+      "premise_to_conclusion_check": "Nested material inclusions and successive anchor restrictions yield direct restriction of the original anchor.",
+      "printed_proof_present": true,
+      "review_status": "SUPPORTED_BY_AXIOM_II"
+    },
+    {
+      "item": "Proposition 4.12",
+      "pdf_page": 12,
+      "premise_to_conclusion_check": "Two sound restriction arrows plus identities do not require their composite arrow; transitivity was not imposed.",
+      "printed_proof_present": true,
+      "review_status": "SUPPORTED_BY_SEPARATION_WITNESS"
+    },
+    {
+      "item": "Lemma 4.13",
+      "pdf_page": 12,
+      "premise_to_conclusion_check": "Axiom II and Axiom III compose material inclusion and anchor-function restriction.",
+      "printed_proof_present": true,
+      "review_status": "SUPPORTED_BY_AXIOMS_II_III"
+    },
+    {
+      "item": "Corollary 4.14",
+      "pdf_page": 12,
+      "premise_to_conclusion_check": "The two displayed alternatives each negate a necessary conjunct in Psi.",
+      "printed_proof_present": true,
+      "review_status": "SUPPORTED_BY_CLAUSE_IV"
+    },
+    {
+      "item": "Proposition 5.2",
+      "pdf_page": 12,
+      "premise_to_conclusion_check": "Undefined assignments lie outside Q; defined zero and nonzero negligible are disjoint. N_delta is typed only when lambda belongs to Lambda_delta.",
+      "printed_proof_present": true,
+      "review_status": "SUPPORTED_WITH_LAMBDA_DELTA_SCOPE"
+    },
+    {
+      "item": "Proposition 5.5",
+      "pdf_page": 13,
+      "premise_to_conclusion_check": "An active describable configuration with the selected empty assignment domain satisfies Axiom V but not universal assignability.",
+      "printed_proof_present": true,
+      "review_status": "SUPPORTED_BY_COUNTERMODEL"
+    },
+    {
+      "item": "Proposition 5.6",
+      "pdf_page": 13,
+      "premise_to_conclusion_check": "Clause VI supplies admitted channel, graph and role; Clause IV supplies witness; III and II supply anchored inheritance.",
+      "printed_proof_present": true,
+      "review_status": "SUPPORTED_BY_CLOSURES_AND_INHERITANCE"
+    },
+    {
+      "item": "Proposition 5.8",
+      "pdf_page": 13,
+      "premise_to_conclusion_check": "A describable active assigned item has no admitted role when the primitive role relation is empty.",
+      "printed_proof_present": true,
+      "review_status": "SUPPORTED_BY_COUNTERMODEL"
+    },
+    {
+      "item": "Proposition 5.14",
+      "pdf_page": 14,
+      "premise_to_conclusion_check": "One material item, defined zero, three role-separated channels and freely supplied component terms +1,-1,0 yield distinct families with identical finite sum.",
+      "printed_proof_present": true,
+      "review_status": "SUPPORTED_BY_SOURCE_EXACT_WITNESS"
+    },
+    {
+      "item": "Proposition 6.3",
+      "pdf_page": 16,
+      "premise_to_conclusion_check": "F1-F3 preserve Psi and active material; F2,F4,F5 preserve channels; finite sum covariance additionally requires channel injection plus F6.",
+      "printed_proof_present": true,
+      "review_status": "SUPPORTED_WITH_INJECTIVITY_CONDITION"
+    },
+    {
+      "item": "Corollary 6.6",
+      "pdf_page": 17,
+      "premise_to_conclusion_check": "Identity and composition of the typed maps are associative, giving a possibly large category and its wide embedding subcategory.",
+      "printed_proof_present": true,
+      "review_status": "SUPPORTED_BY_THEOREM_6_5"
+    },
+    {
+      "item": "Corollary 6.7",
+      "pdf_page": 17,
+      "premise_to_conclusion_check": "Inclusion identity is reflexive and composition of inclusion embeddings is again inclusion; preorder need not be antisymmetric.",
+      "printed_proof_present": true,
+      "review_status": "SUPPORTED_BY_THEOREM_6_5"
+    },
+    {
+      "item": "Theorem 6.8",
+      "pdf_page": 18,
+      "premise_to_conclusion_check": "Witness reflection applies on candidate images; reflected graph and role data give channel reflection; induced injection gives finite-set covariance.",
+      "printed_proof_present": true,
+      "review_status": "SUPPORTED_ON_IMAGE_ONLY"
+    },
+    {
+      "item": "Corollary 6.12",
+      "pdf_page": 20,
+      "premise_to_conclusion_check": "Strict isomorphism induces a channel bijection; term transport and J linearity commute with each finite set sum.",
+      "printed_proof_present": true,
+      "review_status": "SUPPORTED_BY_E1_TO_E9"
+    },
+    {
+      "item": "Theorem 6.14",
+      "pdf_page": 20,
+      "premise_to_conclusion_check": "Inverse and composition of typed bijections preserve all E1-E9; the term-space inverse and pointwise inverse value maps are required.",
+      "printed_proof_present": true,
+      "review_status": "SUPPORTED_BY_E1_TO_E9"
+    },
+    {
+      "item": "Theorem 6.16",
+      "pdf_page": 21,
+      "premise_to_conclusion_check": "Nested staged comparison sets follow by incremental constraints; I7 is exactly strict isomorphism; first empty stage is minimum when I7 empty.",
+      "printed_proof_present": true,
+      "review_status": "SUPPORTED_BY_DEFINITIONS_6_10_6_15"
+    },
+    {
+      "item": "Corollary 6.18",
+      "pdf_page": 22,
+      "premise_to_conclusion_check": "I3=I4 in Theorem 6.17 excludes a first branch at index 4.",
+      "printed_proof_present": true,
+      "review_status": "SUPPORTED_BY_THEOREM_6_17"
+    },
+    {
+      "item": "Proposition 6.22",
+      "pdf_page": 24,
+      "premise_to_conclusion_check": "One-channel zero term and two-channel +1/-1 model have identical nonempty family composite under fixed identity J but unequal channel cardinalities.",
+      "printed_proof_present": true,
+      "review_status": "SUPPORTED_BY_SOURCE_COUNTERMODEL"
+    },
+    {
+      "item": "Theorem 6.23",
+      "pdf_page": 24,
+      "premise_to_conclusion_check": "Universal failure of at least one E1-E9 for every typed candidate negates existence of any strict isomorphism, even if candidate set is empty.",
+      "printed_proof_present": true,
+      "review_status": "SUPPORTED_BY_DEFINITION_6_10"
+    },
+    {
+      "item": "Theorem 7.1",
+      "pdf_page": 24,
+      "premise_to_conclusion_check": "Construction chooses an empty material-record signature; Section 2.2 earlier fixes S_mat. Valid when signature is a selectable model parameter; if S_mat is externally fixed, this particular proof must interpret that fixed signature instead.",
+      "printed_proof_present": true,
+      "review_status": "SCOPE_CLARIFICATION_RECOMMENDED"
+    }
+  ],
+  "scope": "25 remaining printed proof paragraphs, excluding eight Phase8B1 proof chains",
+  "signature_scope_clarification": 1,
+  "source_sha256": "af721c4188a853880fcc896b80da494e4caa6000ab0af3131ee64cd0770fddfe",
+  "status": "25_SOURCE_ARGUMENTS_REVIEWED_1_SIGNATURE_SCOPE_CLARIFICATION",
+  "supports_under_declared_assumptions": 24
+}
