@@ -1,0 +1,46 @@
+{
+  "checks": {
+    "fixed_empty_external_codomain": {
+      "blocking_attribute": "unavailable_annotation",
+      "failure": "no total external-unary material map {a} -> empty codomain",
+      "one_material_full_model": false,
+      "whole_model_nonexistence_claimed": false
+    },
+    "fixed_mixed_arity_relations": {
+      "admitted_channels": 1,
+      "fixed_relation_symbols": 3,
+      "full_model_closure": "IV/VI/VII verified on generated fixture",
+      "nonempty_external_unary_maps": 0,
+      "one_material_full_model": true,
+      "primitive_axioms": "I/II/III/V verified on generated fixture"
+    },
+    "fixed_multiple_annotated_relations": {
+      "admitted_channels": 1,
+      "fixed_relation_symbols": 3,
+      "full_model_closure": "IV/VI/VII verified on generated fixture",
+      "nonempty_external_unary_maps": 3,
+      "one_material_full_model": true,
+      "primitive_axioms": "I/II/III/V verified on generated fixture"
+    },
+    "fixed_nonempty_annotation": {
+      "admitted_channels": 1,
+      "fixed_relation_symbols": 1,
+      "full_model_closure": "IV/VI/VII verified on generated fixture",
+      "nonempty_external_unary_maps": 1,
+      "one_material_full_model": true,
+      "primitive_axioms": "I/II/III/V verified on generated fixture"
+    },
+    "selectable_empty_signature": {
+      "admitted_channels": 1,
+      "fixed_relation_symbols": 0,
+      "full_model_closure": "IV/VI/VII verified on generated fixture",
+      "nonempty_external_unary_maps": 0,
+      "one_material_full_model": true,
+      "primitive_axioms": "I/II/III/V verified on generated fixture"
+    }
+  },
+  "interpretation": "Theorem 7.1 as an existential statement over selectable signatures is supported; a stronger all-fixed-signatures singleton construction requires codomain hypotheses.",
+  "limitations": "Illustrates one-material constructions, not nonexistence of all formation models for an empty external codomain or a proof over arbitrary infinite signature families.",
+  "source_paper_sha256": "af721c4188a853880fcc896b80da494e4caa6000ab0af3131ee64cd0770fddfe",
+  "status": "FOUR_SINGLETON_FIXTURES_PASS_ONE_TYPED_OBSTRUCTION"
+}
