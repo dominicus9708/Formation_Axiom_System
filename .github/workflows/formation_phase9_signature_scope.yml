@@ -1,0 +1,35 @@
+name: Formation v4.5 Phase 9 signature-scope witnesses
+
+on:
+  push:
+    paths:
+      - "src/formation_signature_scope_phase9.py"
+      - "results/formation_signature_scope_phase9.json"
+      - ".github/workflows/formation_phase9_signature_scope.yml"
+  workflow_dispatch:
+
+jobs:
+  finite_witness:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Run exact signature-scope fixtures
+        run: |
+          python -W error -m py_compile src/formation_signature_scope_phase9.py
+          mkdir -p phase9-replay
+          PYTHONHASHSEED=731 python -W error src/formation_signature_scope_phase9.py --output-dir phase9-replay
+      - name: Verify archived finite outputs
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          name = "formation_signature_scope_phase9.json"
+          assert (Path("phase9-replay")/name).read_bytes() == (Path("results")/name).read_bytes()
+          print("PASS: source-locked Phase9 finite output is byte-identical")
+          PY
