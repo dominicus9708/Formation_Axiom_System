@@ -7,7 +7,8 @@ import unittest
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-sys.path.insert(0, str(HERE))
+MODULE_DIR = HERE if (HERE / "apply_formation_phase10_patch.py").exists() else HERE.parent / "src"
+sys.path.insert(0, str(MODULE_DIR))
 import apply_formation_phase10_patch as patch  # noqa: E402
 
 
