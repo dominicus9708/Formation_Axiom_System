@@ -145,6 +145,7 @@ def main() -> None:
     args=parser.parse_args()
     if not (args.en.is_file() and args.kr.is_file()):
         parser.error('Missing original RC1 TeX: use the actual library originals, not a reconstructed PDF')
+    args.output_dir = args.output_dir.resolve()
     args.output_dir.mkdir(parents=True,exist_ok=True)
     paths={'EN':(args.en,EN,args.output_dir/'DSD_Formation_Axiom_System_EN_20261105_P10_CANDIDATE.tex'),
            'KR':(args.kr,KR,args.output_dir/'DSD_Formation_Axiom_System_KR_20261105_P10_CANDIDATE.tex')}
