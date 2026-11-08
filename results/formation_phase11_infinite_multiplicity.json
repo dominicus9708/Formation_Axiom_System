@@ -1,5 +1,24 @@
 {
+  "alternating_harmonic_ordered_partial_sums": {
+    "1": "1",
+    "10": "1627/2520",
+    "2": "1/2",
+    "20": "155685007/232792560",
+    "3": "5/6",
+    "4": "7/12",
+    "5": "47/60"
+  },
+  "alternating_harmonic_positive_odd_subfamily": {
+    "1": "1",
+    "10": "31037876/14549535",
+    "2": "4/3",
+    "20": "414022624965424/166966608033225",
+    "3": "23/15",
+    "4": "176/105",
+    "5": "563/315"
+  },
   "mathematical_deductions_not_from_numeric_tests": {
+    "alternating_harmonic_not_unconditional": "positive-index subseries has divergent harmonic sum even though the alternating enumeration converges",
     "bounded_linear_transport_preserves_unconditional": "bounded linear maps commute with finite-subset-sum net limit",
     "infinite_nonzero_repetition_diverges": "any convergent series must have terms tending to zero",
     "infinite_zero_repetition_converges": "all zero terms give a net of zero finite subsums",
