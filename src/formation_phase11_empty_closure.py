@@ -13,11 +13,14 @@ from fractions import Fraction
 
 def close_formation(materials, expressions, configs, adm_expr, des_expr,
                     res, realize, adm_cfg, lc, bc, active, assigned,
-                    kinds, roles, term_values, assigned_domains):
+                    kinds, roles, role_records, term_values, assigned_domains):
     if not des_expr <= adm_expr:
         raise ValueError('Primitive Axiom I violated')
-    # Anchor constraints are trivial in the empty-predicate test cases and
-    # verified by exact equality for the sole nontrivial singleton case.
+    # Each chosen active-material set is well-typed; anchor inheritance is
+    # stipulated identically in the two nonempty-candidate fixtures.
+    assert all(set(active[p]) <= set(materials) for p in configs)
+    assert all(p in configs and a in materials and k in kinds and r in roles
+               for (p,a,k,r) in role_records)
     psi = {p for p in configs if p in adm_cfg and p in lc and p in bc and
            any((H,h) in res and h in des_expr and (h,p) in realize
                for H in expressions for h in expressions)}
@@ -28,8 +31,9 @@ def close_formation(materials, expressions, configs, adm_expr, des_expr,
                          for p in psi for a in active[p] for k in kinds
                          if a in assigned_domains[k]
                          for r in roles
-                         if (p,a,k,r) in term_values)
+                         if (p,a,k,r) in role_records)
     # Term-value map is supplied for precisely the derived C-domain after Stage VI.
+    assert set(term_values) == {(p,a,k,r) for (p,a,k,v,r) in channels}
     ts = { (p,a,k,v,r):term_values[(p,a,k,r)] for (p,a,k,v,r) in channels }
     all_finite_families = []
     c = sorted(channels)
@@ -45,14 +49,14 @@ def run():
     cases={}
     common=dict(materials={'a'},expressions=set(),configs=set(),adm_expr=set(),des_expr=set(),
                 res=set(),realize=set(),adm_cfg=set(),lc=set(),bc=set(),active={},assigned={},
-                kinds=set(),roles=set(),term_values={},assigned_domains={})
+                kinds=set(),roles=set(),role_records=set(),term_values={},assigned_domains={})
     cases['no_candidates_any_kind']=close_formation(**common)
     q={**common,'kinds':{'lambda'},'assigned':{'lambda':{}},'assigned_domains':{'lambda':set()}}
     cases['empty_configs_nonempty_kind']=close_formation(**q)
     # q undefined, role provisioned but no channels (not a value 0)
     r={**q, 'expressions':{'h'},'configs':{'p'},'adm_expr':{'h'},'des_expr':{'h'},
        'res':{('h','h')},'realize':{('h','p')},'adm_cfg':{'p'},'lc':{'p'},'bc':{'p'},
-       'active':{'p':{'a'}}, 'roles':{'rho'}}
+       'active':{'p':{'a'}}, 'roles':{'rho'}, 'role_records':{('p','a','lambda','rho')}}
     cases['describable_but_unassigned']=close_formation(**r)
     # Once assigning explicit zero, channel present while composite still zero.
     s={**r,'assigned':{'lambda':{'a':'0'}},'assigned_domains':{'lambda':{'a'}},
