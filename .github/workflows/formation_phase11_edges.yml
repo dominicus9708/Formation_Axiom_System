@@ -1,0 +1,42 @@
+name: Formation v4.5 Phase11 edge-boundary checks
+
+on:
+  push:
+    paths:
+      - "src/formation_phase11_infinite_multiplicity.py"
+      - "src/formation_phase11_empty_closure.py"
+      - "results/formation_phase11_infinite_multiplicity.json"
+      - "results/formation_phase11_empty_closure.json"
+      - ".github/workflows/formation_phase11_edges.yml"
+  workflow_dispatch:
+
+jobs:
+  finite-exact:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Execute finite exact-arithmetic checks
+        run: |
+          python -W error -m py_compile src/formation_phase11_infinite_multiplicity.py src/formation_phase11_empty_closure.py
+          mkdir -p phase11-replay
+          PYTHONHASHSEED=731 python -W error src/formation_phase11_infinite_multiplicity.py --output-dir phase11-replay
+          PYTHONHASHSEED=731 python -W error src/formation_phase11_empty_closure.py --output-dir phase11-replay
+      - name: Compare archived results
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          for name in ('formation_phase11_infinite_multiplicity.json', 'formation_phase11_empty_closure.json'):
+              actual = (Path('phase11-replay')/name).read_bytes()
+              expected = (Path('results')/name).read_bytes()
+              assert actual == expected, 'Mismatch: '+name
+              print('REPRODUCED', name)
+          PY
+      - name: State the mathematical scope
+        run: echo "Finite numerical controls and fixtures; not a computer proof of infinite sums or general ZFC theorems"
