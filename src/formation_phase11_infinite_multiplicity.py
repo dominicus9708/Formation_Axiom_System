@@ -40,6 +40,16 @@ def finite_controls() -> dict:
     assert repeated_nonzero['20']=='20'
     repeated_zero = {str(n): str(sum((Fraction(0) for _ in range(n)),Fraction(0))) for n in (1,2,5,10,20)}
     assert set(repeated_zero.values()) == {'0'}
+    # Alternating harmonic sum converges only in the chosen order; an
+    # unconditionally summable one-dimensional family cannot have a divergent
+    # positive-subseries. This is a finite control of an ANALYTIC argument.
+    alternating_order = {}
+    positive_odd_subfamily = {}
+    for n in e_indices:
+        alternating_order[str(n)] = str(sum((Fraction(1 if k%2 else -1, k)
+                                              for k in range(1, n+1)), Fraction(0)))
+        positive_odd_subfamily[str(n)] = str(sum((Fraction(1, 2*k-1)
+                                                 for k in range(1,n+1)), Fraction(0)))
     fixture = replicate({'c':Fraction(1), 'z':Fraction(0)}, 2)
     source_family_sum = sum((v for _,v in fixture),Fraction(0))
     source_distinct_set_sum = sum({k:v for k,v in fixture}.values(),Fraction(0))
@@ -48,6 +58,8 @@ def finite_controls() -> dict:
         'status':'PASS_FINITE_CONTROLS_WITH_INFINITE_ANALYTIC_BOUNDARY',
         'original_source':'Formation v4.5 Appendix E, 2026-10-22, 34pp, SHA256 af721c4188a853880fcc896b80da494e4caa6000ab0af3131ee64cd0770fddfe',
         'orthogonal_partial_sum_samples':tests,
+        'alternating_harmonic_ordered_partial_sums':alternating_order,
+        'alternating_harmonic_positive_odd_subfamily':positive_odd_subfamily,
         'one_nonzero_channel_repeated_finitely':repeated_nonzero,
         'one_zero_channel_repeated_finitely':repeated_zero,
         'two_repeated_indices_same_channel_family_sum':str(source_family_sum),
@@ -55,6 +67,7 @@ def finite_controls() -> dict:
         'mathematical_deductions_not_from_numeric_tests':{
             'infinite_nonzero_repetition_diverges':'any convergent series must have terms tending to zero',
             'infinite_zero_repetition_converges':'all zero terms give a net of zero finite subsums',
+            'alternating_harmonic_not_unconditional':'positive-index subseries has divergent harmonic sum even though the alternating enumeration converges',
             'twice_each_orthogonal_e_n_over_n_unconditional':'Hilbert finite-subset orthogonality / bounded multiplicities',
             'twice_each_orthogonal_e_n_over_n_not_absolute':'2*harmonic series diverges',
             'bounded_linear_transport_preserves_unconditional':'bounded linear maps commute with finite-subset-sum net limit',
