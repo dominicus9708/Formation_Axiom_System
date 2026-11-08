@@ -1,0 +1,59 @@
+{
+  "cases": {
+    "describable_but_unassigned": {
+      "stage4_described_material_count": 1,
+      "stage4_psi_count": 1,
+      "stage6_channels": 0,
+      "stage7_composites": [
+        {
+          "channels": 0,
+          "sum": "0"
+        }
+      ],
+      "stage7_family_count": 1
+    },
+    "empty_configs_nonempty_kind": {
+      "stage4_described_material_count": 0,
+      "stage4_psi_count": 0,
+      "stage6_channels": 0,
+      "stage7_composites": [
+        {
+          "channels": 0,
+          "sum": "0"
+        }
+      ],
+      "stage7_family_count": 1
+    },
+    "explicit_zero_channel": {
+      "stage4_described_material_count": 1,
+      "stage4_psi_count": 1,
+      "stage6_channels": 1,
+      "stage7_composites": [
+        {
+          "channels": 0,
+          "sum": "0"
+        },
+        {
+          "channels": 1,
+          "sum": "0"
+        }
+      ],
+      "stage7_family_count": 2
+    },
+    "no_candidates_any_kind": {
+      "stage4_described_material_count": 0,
+      "stage4_psi_count": 0,
+      "stage6_channels": 0,
+      "stage7_composites": [
+        {
+          "channels": 0,
+          "sum": "0"
+        }
+      ],
+      "stage7_family_count": 1
+    }
+  },
+  "proof_scope": "Finite typed fixture checks only; the general uniqueness of relative closure is a mathematical definitional argument, not proved by four samples.",
+  "source": "Formation v4.5 Clauses IV/VI/VII, Axiom V and Theorem 3.3",
+  "status": "PASS_FOUR_FINITE_DEGENERATE_CLOSURE_CASES"
+}
