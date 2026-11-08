@@ -9,17 +9,17 @@
   },
   "one_nonzero_channel_repeated_finitely": {
     "1": "1",
-    "2": "2",
-    "5": "5",
     "10": "10",
-    "20": "20"
+    "2": "2",
+    "20": "20",
+    "5": "5"
   },
   "one_zero_channel_repeated_finitely": {
     "1": "0",
-    "2": "0",
-    "5": "0",
     "10": "0",
-    "20": "0"
+    "2": "0",
+    "20": "0",
+    "5": "0"
   },
   "original_source": "Formation v4.5 Appendix E, 2026-10-22, 34pp, SHA256 af721c4188a853880fcc896b80da494e4caa6000ab0af3131ee64cd0770fddfe",
   "orthogonal_partial_sum_samples": {
@@ -29,11 +29,23 @@
       "each_nonzero_channel_duplicated_sum_squared_norm": "4",
       "orthogonal_sum_squared_norm": "1"
     },
+    "10": {
+      "absolute_norm_partial_sum": "7381/2520",
+      "bounded_transport_squared_norm": "95918849/30735936",
+      "each_nonzero_channel_duplicated_sum_squared_norm": "1968329/317520",
+      "orthogonal_sum_squared_norm": "1968329/1270080"
+    },
     "2": {
       "absolute_norm_partial_sum": "3/2",
       "bounded_transport_squared_norm": "97/36",
       "each_nonzero_channel_duplicated_sum_squared_norm": "5",
       "orthogonal_sum_squared_norm": "5/4"
+    },
+    "20": {
+      "absolute_norm_partial_sum": "55835135/15519504",
+      "bounded_transport_squared_norm": "6879310234792561/2167695039654144",
+      "each_nonzero_channel_duplicated_sum_squared_norm": "17299975731542641/2709618799567680",
+      "orthogonal_sum_squared_norm": "17299975731542641/10838475198270720"
     },
     "3": {
       "absolute_norm_partial_sum": "11/6",
@@ -52,18 +64,6 @@
       "bounded_transport_squared_norm": "241/80",
       "each_nonzero_channel_duplicated_sum_squared_norm": "5269/900",
       "orthogonal_sum_squared_norm": "5269/3600"
-    },
-    "10": {
-      "absolute_norm_partial_sum": "7381/2520",
-      "bounded_transport_squared_norm": "95918849/30735936",
-      "each_nonzero_channel_duplicated_sum_squared_norm": "1968329/317520",
-      "orthogonal_sum_squared_norm": "1968329/1270080"
-    },
-    "20": {
-      "absolute_norm_partial_sum": "55835135/15519504",
-      "bounded_transport_squared_norm": "6879310234792561/2167695039654144",
-      "each_nonzero_channel_duplicated_sum_squared_norm": "17299975731542641/2709618799567680",
-      "orthogonal_sum_squared_norm": "17299975731542641/10838475198270720"
     }
   },
   "scope": "Tests alone are finite demonstrations, not formal proofs of infinite assertions.",
